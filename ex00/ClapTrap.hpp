@@ -6,7 +6,7 @@
 /*   By: osarsari <osarsari@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 12:27:44 by osarsari          #+#    #+#             */
-/*   Updated: 2023/12/20 13:21:14 by osarsari         ###   ########.fr       */
+/*   Updated: 2024/02/14 12:09:06 by osarsari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,10 @@ public:
 	// Constructors and destructors
 	ClapTrap(void);
 	ClapTrap(std::string name);
+	ClapTrap(const ClapTrap &src);
 	~ClapTrap(void);
 
-	// Copy constructor
+	// Assignment operator
 	ClapTrap &operator=(ClapTrap const &rhs);
 
 	// Actions

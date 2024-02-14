@@ -6,7 +6,7 @@
 /*   By: osarsari <osarsari@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 12:36:34 by osarsari          #+#    #+#             */
-/*   Updated: 2023/12/20 13:22:31 by osarsari         ###   ########.fr       */
+/*   Updated: 2024/02/14 12:15:21 by osarsari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,20 @@
 
 // Constructors and destructors
 
-ClapTrap::ClapTrap(void)
+ClapTrap::ClapTrap(void): _name("default"), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
 	std::cout << "ClapTrap default constructor called" << std::endl;
-	this->_hitPoints = 10;
-	this->_energyPoints = 10;
-	this->_attackDamage = 0;
-	return;
 }
 
-ClapTrap::ClapTrap(std::string name) : _name(name)
+ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
 	std::cout << "ClapTrap parameter constructor called" << std::endl;
-	this->_hitPoints = 10;
-	this->_energyPoints = 10;
-	this->_attackDamage = 0;
-	return;
+}
+
+ClapTrap::ClapTrap(const ClapTrap &src)
+{
+	std::cout << "ClapTrap Copy Constructor called" << std::endl;
+	*this = src;
 }
 
 ClapTrap::~ClapTrap(void)
