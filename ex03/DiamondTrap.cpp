@@ -6,7 +6,7 @@
 /*   By: osarsari <osarsari@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 07:51:55 by osarsari          #+#    #+#             */
-/*   Updated: 2023/12/21 08:18:13 by osarsari         ###   ########.fr       */
+/*   Updated: 2024/02/14 15:41:59 by osarsari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ DiamondTrap::DiamondTrap(void) : ClapTrap(), FragTrap(), ScavTrap()
 	this->_attackDamage = FragTrap::_attackDamage;
 }
 
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap(name)
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"),
+											 FragTrap(name), ScavTrap(name)
 {
 	std::cout << "DiamondTrap parameter constructor called" << std::endl;
 	this->_name = name;
@@ -31,7 +32,8 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), Frag
 	this->_attackDamage = FragTrap::_attackDamage;
 }
 
-DiamondTrap::DiamondTrap(DiamondTrap const &src) : ClapTrap(src), FragTrap(src), ScavTrap(src)
+DiamondTrap::DiamondTrap(DiamondTrap const &src) : ClapTrap(src),
+												   FragTrap(src), ScavTrap(src)
 {
 	std::cout << "DiamondTrap copy constructor called" << std::endl;
 	*this = src;
@@ -58,7 +60,8 @@ DiamondTrap &DiamondTrap::operator=(DiamondTrap const &rhs)
 
 void DiamondTrap::whoAmI(void)
 {
-	std::cout << "My name is " << this->_name << " and my ClapTrap name is " << ClapTrap::_name << std::endl;
+	std::cout << "My name is " << this->_name << " and my ClapTrap name is "
+			  << ClapTrap::_name << std::endl;
 }
 
 void DiamondTrap::attack(std::string const &target)
