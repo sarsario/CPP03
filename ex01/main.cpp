@@ -6,7 +6,7 @@
 /*   By: osarsari <osarsari@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 13:53:39 by osarsari          #+#    #+#             */
-/*   Updated: 2023/12/20 14:41:51 by osarsari         ###   ########.fr       */
+/*   Updated: 2024/02/14 15:15:53 by osarsari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main(void)
 	scav2.beRepaired(10);
 	scav1->guardGate();
 	delete scav1;
+	scav2.guardGate();
 	scav3.guardGate();
-	scav4.guardGate();
 	return (0);
 }
